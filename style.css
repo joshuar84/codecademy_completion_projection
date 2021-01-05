@@ -1,0 +1,55 @@
+body {
+    background-color:forestgreen;
+    width: fit-content;
+    text-align: center;
+}
+#div_container {
+    background-color: black;
+    border: 20px black solid;
+
+}
+#main_header {
+    background-color: crimson;
+}
+#div1 {
+    background-color: blue;
+}
+#div2 {
+    background-color: indianred;
+}
+#div3 {
+    background-color: blueviolet;
+}
+#div4 {
+    background-color: darkgoldenrod;
+}
+#div5 {
+    background-color: chartreuse;
+}
+#progressBar {
+    width: auto;
+    height: 4rem;
+    border: 0.3rem solid #fff700;
+    margin-top: 1.5rem;
+    background-color: #fff700;
+    position: relative;
+    z-index: 0;
+}
+#progressBarFull {
+    height: 3.94rem;
+    background-image: linear-gradient(45deg, #00ffff 25%, #a39eff 25%, #a39eff 50%, #00ffff 50%, #00ffff 75%, #a39eff 75%, #a39eff 100%);
+    background-size: 14.14px 14.14px;
+    width: auto;
+    position: relative;
+    top: -68.5px;
+    z-index: 1;
+}
+#percent_completed {
+    color:#000000;
+    position: relative;
+    z-index: 3;
+}
+#percentage_text {
+    z-index: 2;
+    position: relative;
+}
