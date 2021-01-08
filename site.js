@@ -6,7 +6,7 @@ const maxPercentage = 100;
 
 progressBarFull.style.width = `${(percentCompleted/maxPercentage) * 100}%`;
 
-// Html element variables
+// Html element variables sure
 const startDateElement = document.getElementById('start_date');
 const percentElement = document.getElementById('percent_completed');
 const projectionElement = document.getElementById('completion_projection');
