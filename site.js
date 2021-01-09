@@ -1,5 +1,10 @@
+const inputPercentElement = document.getElementById("percent_input");
+const changePercentage = () => {
+    return parseInt(inputPercentElement.value);
+  };
+
 // Variable representing the completion percentage
-let percentCompleted = 9;
+let percentCompleted = changePercentage();
 
 const progressBarFull = document.getElementById('progressBarFull');
 const maxPercentage = 100;
