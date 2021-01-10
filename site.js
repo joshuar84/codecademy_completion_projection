@@ -6,10 +6,11 @@ const changePercentage = () => {
 // Variable representing the completion percentage
 let percentCompleted = changePercentage();
 
-const progressBarFull = document.getElementById('progressBarFull');
+const progressBarFullElement = document.getElementById('progressBarFull');
+console.log(progressBarFullElement);
 const maxPercentage = 100;
 
-progressBarFull.style.width = `${(percentCompleted/maxPercentage) * 100}%`;
+progressBarFullElement.style.width = `${(percentCompleted/maxPercentage) * 100}%`;
 
 // Html element variables sure
 const startDateElement = document.getElementById('start_date');
