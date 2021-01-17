@@ -1,5 +1,5 @@
 // Variable representing the completion percentage
-let percentCompleted = 11;
+let percentCompleted = 12;
 
 const progressBarFullElement = document.getElementById('progressBarFull');
 console.log(progressBarFullElement);
