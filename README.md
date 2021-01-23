@@ -8,4 +8,3 @@
 1. JavaScript
 2. HTML
 3. CSS
-4. node.js
