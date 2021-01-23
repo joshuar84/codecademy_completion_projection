@@ -1,11 +1,20 @@
 // Variable representing the completion percentage
-let percentCompleted = 15;
+let storage = window.localStorage;
+let percentDone = Number(storage.getItem('percent'));
+let newPercent = document.getElementById('percent_input');
+const submitPercent = () => {
+    storage.setItem('percent', `${newPercent.value}`)
+    console.log(storage.getItem('percent'));
+    percentDone = Number(storage.getItem('percent'));
+    location.reload();
+};
+
+
 
 const progressBarFullElement = document.getElementById('progressBarFull');
-console.log(progressBarFullElement);
 const maxPercentage = 100;
 
-progressBarFullElement.style.width = `${(percentCompleted/maxPercentage) * 100}%`;
+progressBarFullElement.style.width = `${(percentDone/maxPercentage) * 100}%`;
 
 // Html element variables sure
 const startDateElement = document.getElementById('start_date');
@@ -63,7 +72,7 @@ const daysSince = millisecondsIntoDays();
 sinceElement.innerText = daysSince;
 
 // function will convert a number and convert it into a string representing percentage
-const numToPercentString = (num = percentCompleted) => {
+const numToPercentString = (num = percentDone) => {
     const string = `${num}%`;
     return string;
 };
@@ -79,7 +88,7 @@ const totalMillisecondsProjection = (percent, milliseconds) => {
 };
 
 // The total projected time it would take to complete the course from start to finish in milliseconds
-const timeTotalInMilliseconds = totalMillisecondsProjection(percentCompleted, timeDifference());
+const timeTotalInMilliseconds = totalMillisecondsProjection(percentDone, timeDifference());
 
 // Variable that is the difference between the projected time in milliseconds and the amount of time since start in milliseconds
 const timeDifferenceInMilliseconds = timeTotalInMilliseconds - timeDifference();
